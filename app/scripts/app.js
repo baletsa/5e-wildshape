@@ -31,10 +31,10 @@ var LMI = {
               });
               items.each(function(index, item) {
                 icons = '';
-                if ($(item).find("swim").text() !== '') { icons += '<svg><use xlink:href="css/fonts/icons.svg#icon-swim" /></svg>'; }
-                if ($(item).find("fly").text() !== '') { icons += '<svg><use xlink:href="css/fonts/icons.svg#icon-fly" /></svg>'; }
-                if ($(item).find("climb").text() !== '') { icons += '<svg><use xlink:href="css/fonts/icons.svg#icon-climb" /></svg>'; }
-                if ($(item).find("burrow").text() !== '') { icons += '<svg><use xlink:href="css/fonts/icons.svg#icon-burrow" /></svg>'; }
+                if ($(item).find("swim").text() !== '') { icons += '<svg><use xlink:href="images/icons.svg#icon-swim" /></svg>'; }
+                if ($(item).find("fly").text() !== '') { icons += '<svg><use xlink:href="images/icons.svg#icon-fly" /></svg>'; }
+                if ($(item).find("climb").text() !== '') { icons += '<svg><use xlink:href="images/icons.svg#icon-climb" /></svg>'; }
+                if ($(item).find("burrow").text() !== '') { icons += '<svg><use xlink:href="images/icons.svg#icon-burrow" /></svg>'; }
 
                 monList += '<li class="beast"><h3>' + $(item).find("name").text() + '</h3><div><svg><use xlink:href="images/icons.svg#icon-paw" /></svg>' + icons + '</div></li>';
                 i++;
