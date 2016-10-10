@@ -1,0 +1,10 @@
+
+//background loop for social media links.
+$social-sites: twitter, google, facebook, linkedin;
+.social-links {
+  @each $site in $social-sites {
+    .#{$site} {
+      background-image: url('../images/cdn/icons/social-#{$site}.svg');
+    }
+  }
+}

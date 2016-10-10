@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+
+//
+// TYPE
+//
+//general type styles
+html {
+  font-family: $font-primary;
+  font-size: $default-font-size;
+  @media(max-width: $screen-small-max) {
+    font-size: $default-font-size * .9;
+  }
+}
+
+//links
+a {
+  text-decoration: none;
+  transition: color .25s;
+  &:hover {
+    text-decoration: underline;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 1.5rem 0;
+  font-family: $font-secondary;
+  font-weight: normal;
+}
+
+//
+// BASIC
+//
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  margin: 1em 0;
+  padding: 0;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+
+//
+// Remove the gap between audio, canvas, iframes,
+// images, videos and the bottom of their containers:
+// https://github.com/h5bp/html5-boilerplate/issues/440
+//
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+button {
+  &:focus {
+    outline: none;
+  }
+}
+
+//
+// Remove default fieldset styles.
+//
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+%btn {
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  vertical-align: middle;
+}

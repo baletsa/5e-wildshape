@@ -1,0 +1,23 @@
+// class and settings for  
+// a responsive foundational content container
+.content {
+  position: relative;
+  @media(min-width: $screen-large) {
+    @include container(1085px);
+  }
+  @media(max-width: $screen-medium-max) {
+    @include container(970px);
+  }
+  @media(max-width: $screen-small-max) {
+    @include container(750px);
+  }
+  @media(max-width: $screen-xs-max) {
+    @include container(100%);
+    padding: 0 15px;
+  }
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}

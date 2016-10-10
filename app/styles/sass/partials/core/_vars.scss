@@ -1,0 +1,49 @@
+//grid config
+$susy: (
+  columns: 12,
+  gutters: 1/2,
+  math: fluid,
+  gutter-position: split,
+  global-box-sizing: border-box,
+);
+
+//fonts
+$font-primary: 'Open Sans', sans-serif;
+$font-secondary: 'Fira Sans', sans-serif;
+$default-font-size: 16px;
+$default-font-color: #464646;
+$secondary-font-color: #2c2c2c;
+
+//colors
+$orange: #ff8e00;
+//$green: #5cc180;
+$green: #76bb8f;
+$yellow: #ffea00;
+$blue: #0ff;
+$black-default: #666;
+$black-primary: #333;
+$grey: #555;
+$grey-medium: #b3b3b3;
+$grey-light: #e1e1e1;
+
+//break-points if necessary
+$screen-xs: 480px;
+$screen-small: 768px;
+$screen-medium: 992px;
+$screen-large: 1200px;
+
+$screen-xs-max: ($screen-small - 1);
+$screen-small-max: ($screen-medium - 1);
+$screen-medium-max: ($screen-large - 1);
+
+//z-index, so you dont have to worry
+$z-index-1: 100;
+$z-index-2: 200;
+$z-index-3: 300;
+$z-index-4: 400;
+$z-index-5: 500;
+$z-index-6: 600;
+$z-index-7: 700;
+$z-index-8: 800;
+$z-index-9: 900;
+$z-index-10: 1000;

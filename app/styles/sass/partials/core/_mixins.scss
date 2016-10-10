@@ -1,0 +1,66 @@
+//
+// FUNCTIONS
+//
+
+//Create unitless number for other functions
+@function strip-unit($number) {
+  @if type-of($number)=='number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+  @return $number;
+}
+//Photoshop font sizes to relative units
+@function calculate-rem($size) {
+  $rem-size: $size / strip-unit($default-font-size);
+  @return #{$rem-size}rem;
+}
+
+//
+// MIXINS
+//
+
+@mixin font-size($size) {
+  font-size: calculate-rem($size);
+}
+
+//Just in case
+@mixin line-height($font-size, $leading) {
+  line-height: $leading / $font-size;
+}
+
+@mixin kerning-size($value) {
+  letter-spacing: $value/1000+em;
+}
+
+
+//Media Queries
+
+@mixin phone {
+  @media (max-width: #{$screen-xs-max}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$screen-small}) and (max-width: #{$screen-medium}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$screen-medium}) {
+    @content;
+  }
+}
+
+//Button Mixin
+@mixin button-base($btn-color) {
+  //%btn default style in base.scss
+  @extend %btn;
+  background-color: $btn-color;
+
+  &:hover {
+    background-color: darken($btn-color, 5%);
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,209 @@
+# LMI SASS LINT
+# based on Airbnb coding conventions
+#######################################
+
+files:
+  include: '**/*.s+(a|c)ss'
+options:
+  formatter: stylish
+  merge-default-rules: false
+rules:
+  # Extends
+  extends-before-mixins: 0
+  extends-before-declarations: 0
+  placeholder-in-extend: 0
+
+  # Mixins
+  mixins-before-declarations: 2
+
+  # Line Spacing
+  one-declaration-per-line: 2
+  empty-line-between-blocks: 0
+  single-line-per-selector: 2
+
+  # Disallows
+  no-color-keywords: 2
+  no-color-literals: 0
+  no-css-comments: 0
+  no-debug: 1
+  no-duplicate-properties: 2
+  no-empty-rulesets: 2
+  no-extends: 0
+  no-ids: 1
+  no-important: 2
+  no-invalid-hex: 2
+  no-mergeable-selectors: 0
+  no-misspelled-properties: 1
+  no-qualifying-elements: 2
+  no-trailing-zero: 1
+  no-transition-all: 0
+  no-url-protocols: 2
+  no-vendor-prefixes: 2
+  no-warn: 1
+  property-units: 1
+
+  # Nesting
+  force-attribute-nesting: 0
+  force-element-nesting: 0
+  force-pseudo-nesting: 0
+
+  # Name Formats
+  class-name-format: 2
+  function-name-format: 2
+  id-name-format: 0
+  mixin-name-format: 2
+  placeholder-name-format: 2
+  variable-name-format: 2
+
+  # Style Guide
+  bem-depth: 0
+  border-zero: 2
+  brace-style:
+    - 2
+    - allow-single-line: false
+  clean-import-paths: 1
+  empty-args: 1
+  hex-length: 1
+  hex-notation:
+    - 2
+    - style: lowercase
+  indentation:
+    - 2
+    - size: 2
+  leading-zero: 1
+  nesting-depth: 
+    - 2
+    - max-depth: 3
+  property-sort-order:
+    - 1
+    - order:
+      - content
+
+      - box-sizing
+      - display      
+
+      - position
+      - top
+      - right 
+      - bottom
+      - left
+      - z-index
+
+      - flex
+      - flex-basis
+      - flex-direction
+      - flex-flow
+      - flex-grow
+      - flex-shrink
+      - flex-wrap
+      - align-content
+      - align-items
+      - align-self
+      - justify-content
+      - order 
+
+      - opacity
+      - visibility
+      
+      - float
+      - clear
+      
+      - width
+      - min-width
+      - max-width
+      
+      - height
+      - min-height
+      - max-height
+      
+      - margin
+      - margin-top
+      - margin-right
+      - margin-bottom
+      - margin-left
+      
+      - padding
+      - padding-top
+      - padding-right
+      - padding-bottom
+      - padding-left
+      
+      - border
+      - border-top
+      - border-right
+      - border-bottom
+      - border-left
+      - border-width
+      - border-top-width
+      - border-right-width
+      - border-bottom-width
+      - border-left-width
+
+      - border-style
+      - border-top-style
+      - border-right-style
+      - border-bottom-style
+      - border-left-style
+
+      - border-radius
+      - border-top-left-radius
+      - border-top-right-radius
+      - border-bottom-left-radius
+      - border-bottom-right-radius
+
+      - border-color
+      - border-top-color
+      - border-right-color
+      - border-bottom-color
+      - border-left-color
+
+      - background
+      - background-attachment
+      - background-clip
+      - background-color
+      - background-image
+      - background-position
+      - background-position-x
+      - background-position-y
+      - background-repeat
+      - background-repeat-x
+      - background-repeat-y
+      - background-size
+      
+      - color
+
+      - font
+      - font-family
+      - font-size
+      - font-style
+      - font-variant 
+      - font-weight
+
+      - letter-spacing
+      - line-height
+
+      - text-align
+      - text-decoration
+
+    - ignore-custom-properties: true
+  quotes:
+    - 2
+    - style: single
+  shorthand-values: 1
+  url-quotes: 1
+  variable-for-property: 1
+  zero-unit: 2
+
+  # Inner Spacing
+  space-after-comma: 2
+  space-before-colon: 2
+  space-after-colon: 2
+  space-before-brace: 2
+  space-before-bang: 2
+  space-after-bang: 2
+  space-between-parens: 2
+  space-around-operator: 0
+
+  # Final Items
+  trailing-semicolon: 1
+  final-newline: 0

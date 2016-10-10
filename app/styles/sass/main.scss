@@ -1,0 +1,19 @@
+//bower components
+@import "normalize.scss/normalize";
+@import "susy/sass/susy";
+//base theme partials
+@import "partials/core/vars";
+@import "partials/core/mixins";
+@import "partials/core/helpers";
+@import "partials/core/base";
+//shared regions
+@import "partials/regions/header";
+@import "partials/regions/footer";
+//shared components 
+@import "partials/components/buttons";
+@import "partials/components/modal";
+//styles for layout  and modules
+@import "partials/layouts/global";
+@import "partials/layouts/modules";
+//page specific partials
+@import "partials/pages/homepage";

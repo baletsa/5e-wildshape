@@ -1,0 +1,38 @@
+//= include includes/core/head.html
+
+<body>
+  //= include includes/regions/header.html
+  <main>
+    <section id="beastMain">
+      <header>
+        <!--<div class="title-wrapper">
+          <span>Wild Shape</span>
+        </div>-->
+        <nav>
+          <h1>
+            <span>Druid Level</span>
+            <input type="number" id="currentLvl" min="2" max="20" value="2">
+          </h1>
+          <div class="moon-circle">
+            <svg>
+              <use xlink:href="images/icons.svg#icon-moon" />
+            </svg>
+          </div>
+        </nav>
+      </header>
+      <div id="monList"></div>
+    </section>
+    <section id="beastModal">
+      <header>
+        <h1></h1></header>
+      <div class="beast-body"></div>
+      <footer>
+        <button id="modalClose" type="button">Close</button>
+      </footer>
+    </section>
+    <!-- end page header -->
+  </main>
+  //= include includes/regions/footer.html
+</body>
+
+</html>

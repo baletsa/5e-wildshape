@@ -1,0 +1,17 @@
+//button link styles
+.button {
+  @include font-size(18);
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+//button link styles using mixin
+/*.button {
+  //pass in color to button mixin
+  @include button-base($blue);
+}
+
+.button-orange {
+  @include button-base($orange);
+}*/
