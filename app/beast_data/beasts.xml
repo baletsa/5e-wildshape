@@ -166,7 +166,7 @@
     </trait>
     <action>
       <action-name>Bite</action-name>
-      <text>Melee Weapon Attack: +1 to hit, reach 5 ft., one target. Hit: 1 (1d4 — 1) piercing damage.</text>
+      <text>Melee Weapon Attack: +1 to hit, reach 5 ft., one target. Hit: 1 (1d4 - 1) piercing damage.</text>
       <attack>Bite|1|1d4-1</attack>
     </action>
     <spells></spells>
@@ -1267,7 +1267,7 @@
     </trait>
     <action>
       <action-name>Bite</action-name>
-      <text>Melee Weapon Attack: +1 to hit, reach 5 ft., one target. Hit: 2 (1d6 — 1) slashing damage.</text>
+      <text>Melee Weapon Attack: +1 to hit, reach 5 ft., one target. Hit: 2 (1d6 - 1) slashing damage.</text>
       <attack>Bite|1|1d6-1</attack>
     </action>
     <spells></spells>
@@ -1717,11 +1717,11 @@
     <alignment>unaligned</alignment>
     <ac>13 (natural armor)</ac>
     <hp>126 (11d12 + 55)</hp>
-    <speed>swim 50 ft.</speed>
+    <speed></speed>
     <fly></fly>
     <burrow></burrow>
     <climb></climb>
-    <swim></swim>
+    <swim>50 ft.</swim>
     <str>23</str><dex>11</dex><con>21</con><int>1</int><wis>10</wis><cha>5</cha>
     <save></save>
     <skill>Perception +3</skill>
@@ -2169,7 +2169,7 @@
     </trait>
     <action>
       <action-name>Bite</action-name>
-      <text>Melee Weapon Attack: +1 to hit, reach 5 ft., one target. Hit: 1 (1d4 — 1) piercing damage.</text>
+      <text>Melee Weapon Attack: +1 to hit, reach 5 ft., one target. Hit: 1 (1d4 - 1) piercing damage.</text>
       <attack>Bite|1|1d4-1</attack>
     </action>
     <spells></spells>

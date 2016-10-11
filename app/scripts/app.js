@@ -36,7 +36,8 @@ var LMI = {
                 if ($(item).find("climb").text() !== '') { icons += '<svg><use xlink:href="images/icons.svg#icon-climb" /></svg>'; }
                 if ($(item).find("burrow").text() !== '') { icons += '<svg><use xlink:href="images/icons.svg#icon-burrow" /></svg>'; }
 
-                monList += '<li class="beast"><h3>' + $(item).find("name").text() + '</h3><div><svg><use xlink:href="images/icons.svg#icon-paw" /></svg>' + icons + '</div></li>';
+                //monList += '<li class="beast"><h3>' + $(item).find("name").text() + '</h3><div><svg><use xlink:href="images/icons.svg#icon-paw" /></svg>' + icons + '</div></li>';
+                monList += '<li class="beast"><h3>' + $(item).find("name").text() + '</h3><div>' + icons + '</div></li>';
                 i++;
               });
               $('.cr-group[data-cr="' + cr + '"]').find('ul').html(monList);
@@ -114,18 +115,18 @@ var LMI = {
               '<p><span>AC:</span> ' + $(items).find('ac').text() + ' </p>' +
               '<p><span>HP:</span> ' + $(items).find('hp').text() + ' </p>' +
               '<p>' +
-              '<span>Speed:</span> ' + $(items).find('speed').text();
+              '<span>Speed:</span>' + $(items).find('speed').text() + ', ';
             if ($(items).find('swim').text() !== '') {
-              statBlock += ', Swim ' + $(items).find('swim').text();
+              statBlock += 'Swim ' + $(items).find('swim').text() + ', ';
             }
             if ($(items).find('fly').text() !== '') {
-              statBlock += ', Fly ' + $(items).find('fly').text();
+              statBlock += 'Fly ' + $(items).find('fly').text() + ', ';
             }
             if ($(items).find('burrow').text() !== '') {
-              statBlock += ', Burrow ' + $(items).find('burrow').text();
+              statBlock += 'Burrow ' + $(items).find('burrow').text() + ', ';
             }
             if ($(items).find('climb').text() !== '') {
-              statBlock += ', Climb ' + $(items).find('climb').text();
+              statBlock += 'Climb ' + $(items).find('climb').text() + ', ';
             }
             statBlock += '</p>' +
               '</div>' +
@@ -166,7 +167,8 @@ var LMI = {
               $(item).find('action').each(function(i) {
                 statBlock += '<h4><span>' + $(this).find('action-name').text() + ': </span>';
                 $(this).find('text').each(function() {
-                  statBlock += $.text(this) + '<br>';
+                  text = $.text(this).replace('Melee Weapon Attack:', '<i>Melee Weapon Attack:</i>').replace('Hit:', '<i>Hit:</i>');
+                  statBlock += text + '<br>';
                 });
                 statBlock += '</h4>';
               });
