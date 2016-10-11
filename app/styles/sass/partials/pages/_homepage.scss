@@ -23,6 +23,7 @@ span {
 
 .actions {
   color: $maroon;
+  font-family: $font-secondary;
 }
 
 .mid-stats {
@@ -124,6 +125,7 @@ span {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        font-family: $font-secondary;
         h2 {
           margin: 0;
           color: #fff;
@@ -250,6 +252,9 @@ span {
     p {
       margin: 0.5rem 0
     }
+  }
+  span {
+    font-family: $font-secondary;
   }
   footer {
     flex: 0 0 4rem;
