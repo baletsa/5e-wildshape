@@ -1,7 +1,6 @@
 //= include includes/core/head.html
 
 <body>
-  //= include includes/regions/header.html
   <main>
     <section id="beastMain">
       <header>
@@ -10,7 +9,7 @@
         </div>-->
         <nav>
           <h1>
-            <span>Druid Level</span>
+            <span>Level</span>
             <input type="number" id="currentLvl" min="2" max="20" value="2">
           </h1>
           <div class="moon-circle">
@@ -23,16 +22,17 @@
       <div id="monList"></div>
     </section>
     <section id="beastModal">
-      <header>
-        <h1></h1></header>
+      <div class="modal-header">
+        <h1></h1>
+      </div>
       <div class="beast-body"></div>
       <footer>
         <button id="modalClose" type="button">Close</button>
       </footer>
     </section>
-    <!-- end page header -->
   </main>
-  //= include includes/regions/footer.html
+  <!-- Global script includes -->
+  <script src="/scripts/app.js"></script>
 </body>
 
 </html>

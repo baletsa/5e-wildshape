@@ -62,7 +62,7 @@ var LMI = {
           $('#monList').prepend(html);
           monsterList(val);
         });
-        $('div.cr-group').eq(0).find('ul').slideDown();
+        //$('div.cr-group').eq(0).find('ul').slideDown();
       }
 
       //Get CR array based on level and circle
@@ -111,10 +111,10 @@ var LMI = {
             statBlock =
               '<h2>' + $(items).find('size').text() + '  ' + $(items).find('type').text() + '  ' + $(items).find('alignment').text() + '</h2>' +
               '<div class="top-stats">' +
-              '<p><span>Armor Class</span> ' + $(items).find('ac').text() + ' </p>' +
-              '<p><span>Hit Points</span> ' + $(items).find('hp').text() + ' </p>' +
+              '<p><span>AC:</span> ' + $(items).find('ac').text() + ' </p>' +
+              '<p><span>HP:</span> ' + $(items).find('hp').text() + ' </p>' +
               '<p>' +
-              '<span>Speed</span> ' + $(items).find('speed').text();
+              '<span>Speed:</span> ' + $(items).find('speed').text();
             if ($(items).find('swim').text() !== '') {
               statBlock += ', Swim ' + $(items).find('swim').text();
             }
@@ -129,64 +129,64 @@ var LMI = {
             }
             statBlock += '</p>' +
               '</div>' +
-              '<ul>' +
-              '<li>STR<span> ' + $(items).find('str').text() + ' (' + Math.floor(($(items).find('str').text() - 10) / 2) + ')</span></li>' +
-              '<li>DEX<span> ' + $(items).find('dex').text() + ' (' + Math.floor(($(items).find('dex').text() - 10) / 2) + ')</span></li>' +
-              '<li>CON<span> ' + $(items).find('con').text() + ' (' + Math.floor(($(items).find('con').text() - 10) / 2) + ')</span></li>' +
-              '<li>WIS<span> ' + $(items).find('wis').text() + ' (' + Math.floor(($(items).find('wis').text() - 10) / 2) + ')</span></li>' +
-              '<li>INT<span> ' + $(items).find('int').text() + ' (' + Math.floor(($(items).find('int').text() - 10) / 2) + ')</span></li>' +
-              '<li>CHA<span> ' + $(items).find('cha').text() + ' (' + Math.floor(($(items).find('cha').text() - 10) / 2) + ')</span></li>' +
+              '<ul class="ability-section">' +
+              '<li><span>STR</span> ' + $(items).find('str').text() + ' (' + Math.floor(($(items).find('str').text() - 10) / 2) + ')</li>' +
+              '<li><span>DEX</span> ' + $(items).find('dex').text() + ' (' + Math.floor(($(items).find('dex').text() - 10) / 2) + ')</li>' +
+              '<li><span>CON</span> ' + $(items).find('con').text() + ' (' + Math.floor(($(items).find('con').text() - 10) / 2) + ')</li>' +
+              '<li><span>WIS</span> ' + $(items).find('wis').text() + ' (' + Math.floor(($(items).find('wis').text() - 10) / 2) + ')</li>' +
+              '<li><span>INT</span> ' + $(items).find('int').text() + ' (' + Math.floor(($(items).find('int').text() - 10) / 2) + ')</li>' +
+              '<li><span>CHA</span> ' + $(items).find('cha').text() + ' (' + Math.floor(($(items).find('cha').text() - 10) / 2) + ')</li>' +
               '</ul>' +
               '<div class="mid-stats">';
             if ($(items).find('vulnerable').text() !== '') {
-              statBlock += '<h4>Vulnerable: <span> ' + $(items).find('vulnerable').text() + ' </span></h4>';
+              statBlock += '<h4><span>Vulnerable: </span> ' + $(items).find('vulnerable').text() + ' </h4>';
             }
             if ($(items).find('immune').text() !== '') {
-              statBlock += '<h4>Damage Immunities: <span> ' + $(items).find('immune').text() + ' </span></h4>';
+              statBlock += '<h4><span>Damage Immunities: </span> ' + $(items).find('immune').text() + ' </h4>';
             }
             if ($(items).find('conditionImmune').text() !== '') {
-              statBlock += '<h4>Conditional Immunities: <span> ' + $(items).find('conditionImmune').text() + ' </span></h4>';
+              statBlock += '<h4><span>Conditional Immunities: </span> ' + $(items).find('conditionImmune').text() + ' </h4>';
             }
             if ($(items).find('senses').text() !== '') {
-              statBlock += '<h4>Senses: <span> ' + $(items).find('senses').text() + ' </span></h4>';
+              statBlock += '<h4><span>Senses: </span> ' + $(items).find('senses').text() + ' </h4>';
             }
             if ($(items).find('languages').text() !== '') {
-              statBlock += '<h4>Languages: <span> ' + $(items).find('languages').text() + ' </span></h4>';
+              statBlock += '<h4><span>Languages: </span> ' + $(items).find('languages').text() + ' </h4>';
             }
-            statBlock += '<h4>Challenge: <span> ' + $(items).find('cr').text() + ' </span></h4>' + '</div>' + '<div class="traits-stats">';
+            statBlock += '<h4><span>CR: </span> ' + $(items).find('cr').text() + '</h4>' + '</div>' + '<div class="traits-stats">';
             items.each(function(index, item) {
               $(item).find('trait').each(function(i) {
-                statBlock += '<h4>' + $(this).find('trait-name').text() + ': <span>';
+                statBlock += '<h4><span>' + $(this).find('trait-name').text() + ': </span>';
                 $(this).find('text').each(function() {
-                  statBlock += $.text(this) + '<br><br>';
+                  statBlock += $.text(this) + '<br>';
                 });
-                statBlock += '</span></h4>';
+                statBlock += '</h4>';
               });
-              statBlock += '<h3>Actions</h3>';
+              statBlock += '<h3 class="actions">Actions</h3>';
               $(item).find('action').each(function(i) {
-                statBlock += '<h4>' + $(this).find('action-name').text() + ': <span>';
+                statBlock += '<h4><span>' + $(this).find('action-name').text() + ': </span>';
                 $(this).find('text').each(function() {
-                  statBlock += $.text(this) + '<br><br>';
+                  statBlock += $.text(this) + '<br>';
                 });
-                statBlock += '</span></h4>';
+                statBlock += '</h4>';
               });
               $(item).find('reaction').each(function(i) {
-                statBlock += '<h4>' + $(this).find('reaction-name').text() + ': <span>';
+                statBlock += '<h4><span>' + $(this).find('reaction-name').text() + ': </span>';
                 $(this).find('text').each(function() {
-                  statBlock += $.text(this) + '<br><br>';
+                  statBlock += $.text(this) + '<br>';
                 });
-                statBlock += '</span></h4>';
+                statBlock += '</h4>';
               });
             });
             if ($(items).find('spells').text() !== '') {
-              statBlock += '<h4>Spells<span> ';
+              statBlock += '<h4><span>Spells</span> ';
               var spells = $(items).find('spells').text().split(', ');
               for (var i = 0; i < spells.length; i++) {
                 statBlock += '<a href="#" class="spell-pop">' + capitalize(spells[i]) + '</a>, ';
               }
-              statBlock += '</span></h4>';
+              statBlock += '</h4>';
             }
-            $('#beastModal header').find('h1').html($(items).find('name').text());
+            $('#beastModal .modal-header').find('h1').html($(items).find('name').text());
             $('.beast-body').html(statBlock);
           },
           error: function(xhr, status) {

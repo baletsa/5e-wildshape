@@ -3,6 +3,41 @@ html {
   color: $black-default;
 }
 
+.top-stats {
+  span {
+    margin-right: .5em;
+    font-family: $font-secondary;
+    font-weight: bold;
+  }
+}
+
+span {
+  color: $maroon;
+  font-weight: bold;
+}
+
+.traits-stats span {
+  margin-right: .25rem;
+  color: #333;
+}
+
+.actions {
+  color: $maroon;
+}
+
+.mid-stats {
+  padding: 1rem 0;
+  h4 {
+    margin: .5rem 0 0;
+  }
+  h4:first-child {
+    margin: 0;
+  }
+  span {
+    margin-right: .25em;
+  }
+}
+
 .moon-circle {
   cursor: pointer;
   width: 3rem;
@@ -138,25 +173,29 @@ html {
 
 #beastModal {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
+  right: 0;
+  bottom: 0;
   left: 0;
   z-index: 100;
   opacity: 0;
   flex-direction: column;
   width: 100%;
   height: 100%;
-  background: #f0f0e1;
-  header {
+  background: #f5f0dd;
+  .modal-header {
     flex: 0 0 3.5rem;
     display: flex;
     align-items: center;
     text-align: center;
-    padding: 1rem;
+    padding: 1rem 1rem 0;
     box-sizing: border-box;
     h1 {
       margin: 0;
+      color: $maroon;
       font-size: 2.4rem;
+      line-height: 1;
     }
   }
   .beast-body {
@@ -164,7 +203,6 @@ html {
     overflow: auto;
     padding: 0 1rem 1rem;
     font-size: 1.2rem;
-    font-family: quicksandregular;
     &#currentBlock {
       margin-right: 1rem;
     }
@@ -176,43 +214,36 @@ html {
       margin: 0;
     }
     h2 {
-      font-size: 1.4rem;
-      border-bottom: 0.1rem solid $grey-light;
-      padding: 0.5rem 0 1rem;
+      font-size: 1rem;
+      border-bottom: 2px solid #c9ad6a;
+      padding: 0.15rem 0 1rem;
       margin: 0 0 0.5rem;
-      ;
+      font-style: italic;
     }
     h3 {
       padding-top: 1rem;
       margin: 0;
       font-size: 1.8rem;
-      border-top: 0.1rem solid $grey-light;
-    }
-    h4 {
-      margin: 1rem 0 0;
-      font-family: 'quicksandbold';
-      span {
-        font-family: 'quicksandregular', helvetica;
-      }
+      border-top: 2px solid #c9ad6a;
     }
     ul {
       list-style: none;
       display: flex;
       margin: 1rem 0 0;
       padding: 0.5rem 0;
-      border-bottom: 0.1rem solid $grey-light;
-      border-top: 0.1rem solid $grey-light;
+      border-bottom: 2px solid #c9ad6a;
+      border-top: 2px solid #c9ad6a;
       li {
         flex: 1;
         display: flex;
         flex-direction: column;
         text-align: center;
         font-size: 1.2rem;
-        font-weight: bold;
-        font-family: 'quicksandbold';
+        @media(max-width: $screen-xxs) {
+          font-size: 1rem;
+        }
         span {
-          font-weight: normal;
-          font-family: 'quicksandregular', helvetica;
+          font-weight: bold;
         }
       }
     }
