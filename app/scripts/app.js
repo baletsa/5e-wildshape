@@ -4,51 +4,28 @@ var LMI = {
   common: {
     init: function() {
 
-
       //Create a Monster Stat Block
       function monsterList(cr) {
-        var currentLvl = $('#currentLvl').val();
-        if (currentLvl < 2) {
-          $('#monList').html('<div class="error">You cannot Wild Shape yet</div>');
-        } else if (currentLvl > 20) {
-          $('#monList').html('<div class="error">The maximum level is 20</div>)');
-        } else {
-          $.ajax({
-            type: "get",
-            url: "beast_data/beasts.xml",
-            dataType: "xml",
-            success: function(xml) {
-              var monList = '';
-              i = 0;
-              var items = $(xml).find("monster").filter(function() {
-                if (currentLvl >= 2 && currentLvl < 4) {
-                  return $('cr', this).text() === cr && $('swim', this).text() === "" && $('fly', this).text() === "";
-                } else if (currentLvl >= 4 && currentLvl < 8) {
-                  return $('cr', this).text() === cr && $('fly', this).text() === "";
-                } else {
-                  return $('cr', this).text() === cr;
-                }
-              });
-              items.each(function(index, item) {
-                icons = '';
-                if ($(item).find("swim").text() !== '') { icons += '<svg><use xlink:href="images/icons.svg#icon-swim" /></svg>'; }
-                if ($(item).find("fly").text() !== '') { icons += '<svg><use xlink:href="images/icons.svg#icon-fly" /></svg>'; }
-                if ($(item).find("climb").text() !== '') { icons += '<svg><use xlink:href="images/icons.svg#icon-climb" /></svg>'; }
-                if ($(item).find("burrow").text() !== '') { icons += '<svg><use xlink:href="images/icons.svg#icon-burrow" /></svg>'; }
+        $.ajax({
+          type: "get",
+          url: "beastiary/mm.json",
+          dataType: "json",
+          success: function(json) {
+            var monList = '';
+            i = 0;
+            items = $(json.monster);
+            items.each(function() {
+              monList += '<li class="beast"><h3>' + this.name + '</h3></li>';
+              i++;
+            });
+            $('.cr-group[data-cr="' + cr + '"]').find('ul').html(monList);
+            $('.cr-group[data-cr="' + cr + '"]').find('span').html(i);
 
-                //monList += '<li class="beast"><h3>' + $(item).find("name").text() + '</h3><div><svg><use xlink:href="images/icons.svg#icon-paw" /></svg>' + icons + '</div></li>';
-                monList += '<li class="beast"><h3>' + $(item).find("name").text() + '</h3><div>' + icons + '</div></li>';
-                i++;
-              });
-              $('.cr-group[data-cr="' + cr + '"]').find('ul').html(monList);
-              $('.cr-group[data-cr="' + cr + '"]').find('span').html(i);
-
-            },
-            error: function(xhr, status) {
-              console.log(status); //handle error here
-            }
-          });
-        }
+          },
+          error: function(xhr, status) {
+            console.log(status);
+          }
+        });
       }
 
       function addMonsters(list) {
@@ -60,57 +37,38 @@ var LMI = {
             '</div>' +
             '<ul></ul>' +
             '</div>';
-          $('#monList').prepend(html);
+          $('#monList').append(html);
           monsterList(val);
         });
         //$('div.cr-group').eq(0).find('ul').slideDown();
       }
 
       //Get CR array based on level and circle
-      function monsterLvl(level, moon) {
-        var preList;
-        var crList;
-        if (moon === true) {
-          if (level >= 2 && level < 6) {
-            crList = ['0', '1/8', '1/4', '1/2', '1'];
-          } else {
-            preList = ['0', '1/8', '1/4', '1/2', '1'];
-            crList = [];
-            for (i = 6; i <= level; i++) {
-              var foo = Math.floor(i / 3);
-              preList.push('' + foo + '');
-            }
-            $.each(preList, function(i, el) {
-              if ($.inArray(el, crList) === -1) {
-                crList.push(el);
-              }
-            });
-          }
-        } else {
-          if (level >= 2 && level < 4) {
-            crList = ['0', '1/8', '1/4'];
-          } else if (level >= 4 && level < 8) {
-            crList = ['0', '1/8', '1/4', '1/2'];
-          } else {
-            crList = ['0', '1/8', '1/4', '1/2', '1'];
-          }
+      function monsterLvl() {
+        crList = ['0', '1/8', '1/4', '1/2', '1'];
+        for (i = 2; i < 25; i++) {
+          cr = i.toString();
+          crList.push(cr);
         }
-        //console.log(crList);
+        crList.push('30');
         addMonsters(crList);
       }
+      monsterLvl();
 
       //Create a Monster Stat Block
       function monsterBlock(name) {
         $.ajax({
           type: "get",
-          url: "beast_data/beasts.xml",
-          dataType: "xml",
-          success: function(xml) {
-            var items = $(xml).find("monster").filter(function() {
+          url: "beastiary/mm.json",
+          dataType: "json",
+          success: function(json) {
+            //items = JSON.parse(json);
+            monsters = json.monster;
+            var items = monsters.filter(function() {
               return $('name', this).text() === name;
             });
             statBlock =
-              '<h2>' + $(items).find('size').text() + '  ' + $(items).find('type').text() + '  ' + $(items).find('alignment').text() + '</h2>' +
+              '<h2>' + items.size + '  ' + $(items).find('type').text() + '  ' + $(items).find('alignment').text() + '</h2>' +
               '<div class="top-stats">' +
               '<p><span>AC:</span> ' + $(items).find('ac').text() + ' </p>' +
               '<p><span>HP:</span> ' + $(items).find('hp').text() + ' </p>' +
@@ -192,17 +150,13 @@ var LMI = {
             $('.beast-body').html(statBlock);
           },
           error: function(xhr, status) {
-            console.log(status); //handle error here
+            console.log(status);
           }
         });
       }
 
-
-
       var moonCircle = ($('.moon-circle').hasClass('active')) ? true : false;
       var currentLvl = $('#currentLvl').val();
-
-      monsterLvl(currentLvl, moonCircle);
 
       //Show/Collapse Beast Lists
       $('body').on('click', '.cr-header', function() {
@@ -226,21 +180,6 @@ var LMI = {
         }, 200, function() {
           $('#beastModal').css('display', 'none');
         });
-      });
-      //Select/Deselect Circle of the Moon
-      $('.moon-circle').click(function() {
-        $('.moon-circle').toggleClass('active');
-        var moonCircle = ($('.moon-circle').hasClass('active')) ? true : false;
-        var currentLvl = $('#currentLvl').val();
-        $('#monList').html('');
-        monsterLvl(currentLvl, moonCircle);
-      });
-      //Adjust Level
-      $("#currentLvl").change(function() {
-        var moonCircle = ($('.moon-circle').hasClass('active')) ? true : false;
-        var currentLvl = $('#currentLvl').val();
-        $('#monList').html('');
-        monsterLvl(currentLvl, moonCircle);
       });
 
     }

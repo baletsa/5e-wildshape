@@ -69,6 +69,7 @@ span {
   header {
     z-index: 100;
     position: relative;
+    background-color: #666;
     nav {
       height: 5rem;
       padding: 1rem;
@@ -82,6 +83,10 @@ span {
     h1 {
       margin: 0;
       font-size: 2rem;
+      padding: .25em 0;
+      text-transform: uppercase;
+      text-align: center;
+      color: #eee;
       input {
         background: $grey;
         display: inline-block;
@@ -121,7 +126,7 @@ span {
         cursor: pointer;
         border-bottom: 0.1rem solid rgba(0, 0, 0, 0.15);
         padding: 1rem;
-        background: $green;
+        background: #bb7676;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -132,7 +137,7 @@ span {
           text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
         }
         span {
-          background: darken($green, 10%);
+          background: darken(#bb7676, 10%);
           display: inline-block;
           padding: 0.2rem 0.6rem;
           font-size: 1.4rem;
