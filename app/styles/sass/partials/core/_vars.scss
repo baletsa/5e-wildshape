@@ -15,17 +15,28 @@ $default-font-color: #464646;
 $secondary-font-color: #2c2c2c;
 
 //colors
-$orange: #ff8e00;
-//$green: #5cc180;
 $green: #76bb8f;
-$yellow: #ffea00;
-$blue: #0ff;
 $maroon: #58180d;
+$beige: #f5f0dd;
 $black-default: #666;
 $black-primary: #333;
 $grey: #555;
 $grey-medium: #b3b3b3;
 $grey-light: #e1e1e1;
+
+// dnd modal theme
+/*
+$modal-header-color: $maroon;
+$modal-background-color: $beige;
+$modal-divider-color: #c9ad6a;
+$modal-secondary-color: $maroon;
+*/
+
+// app modal theme
+$modal-header-color: #418459;
+$modal-background-color: #fff;
+$modal-divider-color: $grey-light;
+$modal-secondary-color: #000;
 
 //break-points if necessary
 $screen-xs: 480px;

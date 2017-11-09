@@ -1,0 +1,105 @@
+#beastModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  flex-direction: column;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background: $modal-background-color;
+  .modal-header {
+    box-sizing: border-box;
+    display: flex;
+    //flex: 0 0 3.5rem;
+    flex: 0 0 auto;
+    align-items: center;
+    padding: 1rem 1rem 0;
+    h1 {
+      margin: 0; //color: $maroon;
+      color: $modal-header-color;
+      font-size: 2.4rem;
+      line-height: 1;
+    }
+  }
+  .beast-body {
+    flex: 1;
+    padding: 0 1rem 1rem;
+    font-size: 1.2rem;
+
+    overflow: auto;
+    &#currentBlock {
+      margin-right: 1rem;
+    }
+    &#extraBlock {
+      background: #e5e5e5;
+    }
+    h1 {
+      margin: 0;
+      font-size: 1.6em;
+    }
+    h2 {
+      margin: 0 0 .5rem;
+      padding: .15rem 0 1rem;
+      border-bottom: 2px solid $modal-divider-color;
+      font-size: 1rem;
+      font-style: italic;
+    }
+    h3 {
+      margin: 0;
+      padding-top: 1.5rem;
+      border-top: 2px solid $modal-divider-color;
+      font-size: 1.8rem;
+    }
+    ul {
+      display: flex;
+      margin: 1rem 0 0;
+      padding: .5rem 0;
+      border-top: 2px solid $modal-divider-color;
+      border-bottom: 2px solid $modal-divider-color;
+
+      list-style: none;
+      li {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        font-size: 1.2rem;
+        text-align: center;
+        @media(max-width: $screen-xxs) {
+          font-size: 1rem;
+        }
+        span {
+          font-weight: bold;
+        }
+      }
+    }
+    p {
+      margin: .5rem 0;
+    }
+  }
+  span {
+    color: $modal-secondary-color;
+    font-family: $font-secondary;
+    font-weight: bold;
+  }
+  footer {
+    display: flex;
+    flex: 0 0 4rem;
+    button {
+      flex: 1;
+      border: 0;
+      background: $black-default;
+      color: #fff;
+      font-size: 2rem;
+      text-align: center;
+    }
+  }
+}
+
+.actions {
+  color: $modal-header-color;
+  font-family: $font-secondary;
+}

@@ -1,19 +1,20 @@
 'use strict';
 
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var config = require('../config').sass;
+var gulp = require('gulp'),
+  config = require('../config').sass,
+  gutil = require('gulp-util'),
+  gulpif = require('gulp-if'),
+  plumber = require('gulp-plumber');
 
-var gutil = require('gulp-util');
-var gulpif = require('gulp-if');
-var plumber = require('gulp-plumber');
 
-var sasslint = require('gulp-sass-lint');
-var postcss = require('gulp-postcss');
-var autoprefixer = require('autoprefixer');
-var nano = require('gulp-cssnano');
-var browserSync = require('browser-sync');
-var sourcemaps = require('gulp-sourcemaps');
+var sass = require('gulp-sass'),
+  cache = require('gulp-cached'),
+  sasslint = require('gulp-sass-lint'),
+  postcss = require('gulp-postcss'),
+  autoprefixer = require('autoprefixer'),
+  nano = require('gulp-cssnano'),
+  sourcemaps = require('gulp-sourcemaps'),
+  browserSync = require('browser-sync');
 
 var processors = [
   autoprefixer({
@@ -28,22 +29,7 @@ if (gutil.env.minify === true) {
   myConfig.settings.outputStyle = 'compressed';
 }
 
-//temporarily a separate task until ignore function works
-//https://github.com/sasstools/sass-lint/pull/402
-gulp.task('sass-lint', function() {
-  return gulp.src(['app/styles/sass/partials/**/*.scss', '!app/**/_hacks.scss'])
-    .pipe(plumber({
-      errorHandler: function(error) {
-        gutil.log(gutil.colors.red.bold(error.message));
-        gutil.beep();
-        this.emit('end');
-      }
-    }))
-    .pipe(sasslint())
-    .pipe(sasslint.format())
-    .pipe(sasslint.failOnError())
-});
-
+// Process
 gulp.task('sass', function() {
   return gulp.src(config.src)
     .pipe(plumber({
@@ -58,7 +44,21 @@ gulp.task('sass', function() {
     .pipe(postcss(processors))
     .pipe(gulpif(!minify, sourcemaps.write()))
     .pipe(gulp.dest(config.dest))
-    .pipe(browserSync.reload({
-      stream: true
-    }));
+    .pipe(browserSync.stream());
+});
+
+// Lint
+gulp.task('sass-lint', function() {
+  return gulp.src(['app/styles/sass/partials/**/*.scss'])
+    .pipe(plumber({
+      errorHandler: function(error) {
+        gutil.log(gutil.colors.red.bold(error.message));
+        gutil.beep();
+        this.emit('end');
+      }
+    }))
+    .pipe(cache('sasslinting'))
+    .pipe(sasslint())
+    .pipe(sasslint.format())
+    .pipe(sasslint.failOnError());
 });

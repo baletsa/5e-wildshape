@@ -1,11 +1,22 @@
-var gulp       = require('gulp'),
-    changed    = require('gulp-changed'),
-    config     = require('../config').images,
-    imagemin   = require('gulp-imagemin');
+var gulp = require('gulp'),
+  config = require('../config').images,
+  changed = require('gulp-changed'),
+  gutil = require('gulp-util'),
+  gulpif = require('gulp-if'),
+  browserSync = require('browser-sync');
+
+// image minification
+var imagemin = require('gulp-imagemin');
 
 gulp.task('images', function() {
-  return gulp.src(config.src)
-    .pipe(changed(config.dest)) // Ignore unchanged files
-    //.pipe(imagemin()) // Optimize
-    .pipe(gulp.dest(config.dest));
+  if (gutil.env.minify === true) {
+    return gulp.src(config.src)
+      .pipe(imagemin()) // Minify
+      .pipe(gulp.dest(config.dest));
+  } else {
+    return gulp.src(config.src)
+      .pipe(changed(config.dest)) // Ignore unchanged files
+      .pipe(gulp.dest(config.dest))
+      .pipe(browserSync.stream());
+  }
 });

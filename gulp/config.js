@@ -6,15 +6,15 @@ module.exports = {
   build: './release',
   browserSync: {
     server: {
-      // We're serving the src folder as well for sass sourcemap linking
-      baseDir: [dest, src]
+      baseDir: [dest]
     },
     notify: false, //hide the annoying notification
     files: [
       dest + '/**',
       // Exclude Map files
       '!' + dest + '/**.map'
-    ]
+    ],
+    online: true
   },
   sass: {
     src: src + '/styles/sass/**/*.{sass,scss}',
@@ -34,7 +34,7 @@ module.exports = {
     dest: dest + '/fonts'
   },
   images: {
-    src: src + '/images/**',
+    src: src + '/images/**/*.{png,jpg,gif,svg}',
     dest: dest + '/images'
   },
   markup: {
@@ -65,10 +65,6 @@ module.exports = {
         global_defs: {
           DEBUG: false
         }
-      },
-      output: {
-        beautify: true,
-        indent_level: 0
       }
     }
   }
