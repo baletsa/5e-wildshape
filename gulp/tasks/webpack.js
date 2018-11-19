@@ -1,14 +1,18 @@
 'use strict';
 
-var gulp = require('gulp');
-var webpack = require('webpack-stream');
-var config = require('../config').scripts;
-var webpackConfig = require('../webpack.config.js');
+var gulp = require('gulp'),
+  config = require('../config').scripts,
+  webpackConfig = require('../webpack.config.js'),
+  gutil = require('gulp-util'),
+  gulpif = require('gulp-if'),
+  plumber = require('gulp-plumber');
 
-var gutil = require('gulp-util');
-var gulpif = require('gulp-if');
-var plumber = require('gulp-plumber');
+var webpack = require('webpack-stream'),
+  browserSync = require('browser-sync');
 
+if (gutil.env.minify === true) {
+  var minify = true;
+}
 
 gulp.task('webpack', function() {
   return gulp.src(config.src)
@@ -19,5 +23,6 @@ gulp.task('webpack', function() {
       }
     }))
     .pipe(webpack(webpackConfig))
-    .pipe(gulp.dest(config.dest));
+    .pipe(gulp.dest(config.dest))
+    .pipe(browserSync.stream());
 });

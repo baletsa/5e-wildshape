@@ -3,4 +3,6 @@ node_modules
 .sass-cache
 *.map
 release/*
+reports/*
+package-lock.json
 

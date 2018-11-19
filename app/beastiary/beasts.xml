@@ -12,7 +12,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>19</str><dex>13</dex><con>17</con><int>2</int><wis>12</wis><cha>5</cha>
+    <str>19</str>
+    <dex>13</dex>
+    <con>17</con>
+    <int>2</int>
+    <wis>12</wis>
+    <cha>5</cha>
     <save></save>
     <skill>Perception +5</skill>
     <resist></resist>
@@ -51,7 +56,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>19</str><dex>11</dex><con>15</con><int>2</int><wis>12</wis><cha>5</cha>
+    <str>19</str>
+    <dex>11</dex>
+    <con>15</con>
+    <int>2</int>
+    <wis>12</wis>
+    <cha>5</cha>
     <save></save>
     <skill></skill>
     <resist></resist>
@@ -80,7 +90,12 @@
     <burrow></burrow>
     <climb>30 ft.</climb>
     <swim></swim>
-    <str>16</str><dex>14</dex><con>14</con><int>6</int><wis>12</wis><cha>7</cha>
+    <str>16</str>
+    <dex>14</dex>
+    <con>14</con>
+    <int>6</int>
+    <wis>12</wis>
+    <cha>7</cha>
     <save></save>
     <skill>Athletics +5, Perception +3</skill>
     <resist></resist>
@@ -108,6 +123,45 @@
     <spells></spells>
   </monster>
   <monster>
+    <name>Aurochs</name>
+    <size>Large</size>
+    <type>beast</type>
+    <alignment>unaligned</alignment>
+    <ac>11 (natural armor)</ac>
+    <hp>49 (6d10 + 16)</hp>
+    <speed>50 ft.</speed>
+    <fly></fly>
+    <burrow></burrow>
+    <climb></climb>
+    <swim></swim>
+    <str>20</str>
+    <dex>10</dex>
+    <con>19</con>
+    <int>2</int>
+    <wis>12</wis>
+    <cha>5</cha>
+    <save></save>
+    <skill></skill>
+    <resist></resist>
+    <vulnerable></vulnerable>
+    <immune></immune>
+    <conditionImmune></conditionImmune>
+    <senses></senses>
+    <passive>11</passive>
+    <languages></languages>
+    <cr>2</cr>
+    <trait>
+      <trait-name>Charge</trait-name>
+      <text>If the aurochs moves at least 20 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an additional 9 (2d8) piercing damage. If the target is a creature, it must succeed on a DC 15 Strength saving throw or be knocked prone.</text>
+    </trait>
+    <action>
+      <action-name>Gore</action-name>
+      <text>Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 14 (2d8 + 5) piercing damage.</text>
+      <attack>Gore|7|2d8+5</attack>
+    </action>
+    <spells></spells>
+  </monster>
+  <monster>
     <name>Axe Beak</name>
     <size>Large</size>
     <type>beast</type>
@@ -119,7 +173,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>14</str><dex>12</dex><con>12</con><int>2</int><wis>10</wis><cha>5</cha>
+    <str>14</str>
+    <dex>12</dex>
+    <con>12</con>
+    <int>2</int>
+    <wis>10</wis>
+    <cha>5</cha>
     <save></save>
     <skill></skill>
     <resist></resist>
@@ -149,7 +208,12 @@
     <burrow></burrow>
     <climb>30 ft.</climb>
     <swim></swim>
-    <str>8</str><dex>14</dex><con>11</con><int>4</int><wis>12</wis><cha>6</cha>
+    <str>8</str>
+    <dex>14</dex>
+    <con>11</con>
+    <int>4</int>
+    <wis>12</wis>
+    <cha>6</cha>
     <save></save>
     <skill></skill>
     <resist></resist>
@@ -183,7 +247,12 @@
     <burrow>5 ft.</burrow>
     <climb></climb>
     <swim></swim>
-    <str>4</str><dex>11</dex><con>12</con><int>2</int><wis>12</wis><cha>5</cha>
+    <str>4</str>
+    <dex>11</dex>
+    <con>12</con>
+    <int>2</int>
+    <wis>12</wis>
+    <cha>5</cha>
     <save></save>
     <skill></skill>
     <resist></resist>
@@ -217,7 +286,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>2</str><dex>15</dex><con>8</con><int>2</int><wis>12</wis><cha>4</cha>
+    <str>2</str>
+    <dex>15</dex>
+    <con>8</con>
+    <int>2</int>
+    <wis>12</wis>
+    <cha>4</cha>
     <save></save>
     <skill></skill>
     <resist></resist>
@@ -255,7 +329,12 @@
     <burrow></burrow>
     <climb>30 ft.</climb>
     <swim></swim>
-    <str>15</str><dex>10</dex><con>14</con><int>2</int><wis>12</wis><cha>7</cha>
+    <str>15</str>
+    <dex>10</dex>
+    <con>14</con>
+    <int>2</int>
+    <wis>12</wis>
+    <cha>7</cha>
     <save></save>
     <skill></skill>
     <resist></resist>
@@ -286,7 +365,6 @@
     </action>
     <spells></spells>
   </monster>
-
   <monster>
     <name>Blood Hawk</name>
     <size>Small</size>
@@ -299,7 +377,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>6</str><dex>14</dex><con>10</con><int>3</int><wis>14</wis><cha>5</cha>
+    <str>6</str>
+    <dex>14</dex>
+    <con>10</con>
+    <int>3</int>
+    <wis>14</wis>
+    <cha>5</cha>
     <save></save>
     <skill>Perception +4</skill>
     <resist></resist>
@@ -337,7 +420,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>13</str><dex>11</dex><con>12</con><int>2</int><wis>9</wis><cha>5</cha>
+    <str>13</str>
+    <dex>11</dex>
+    <con>12</con>
+    <int>2</int>
+    <wis>9</wis>
+    <cha>5</cha>
     <save></save>
     <skill></skill>
     <resist></resist>
@@ -376,7 +464,12 @@
     <burrow></burrow>
     <climb>30 ft.</climb>
     <swim></swim>
-    <str>19</str><dex>10</dex><con>16</con><int>2</int><wis>13</wis><cha>7</cha>
+    <str>19</str>
+    <dex>10</dex>
+    <con>16</con>
+    <int>2</int>
+    <wis>13</wis>
+    <cha>7</cha>
     <save></save>
     <skill>Perception +3</skill>
     <resist></resist>
@@ -408,6 +501,46 @@
     <spells></spells>
   </monster>
   <monster>
+    <name>Brontosaurus</name>
+    <size>Gargantuan</size>
+    <type>beast</type>
+    <alignment>unaligned</alignment>
+    <ac>15 (natural armor)</ac>
+    <hp>121 (9d20 + 27)</hp>
+    <speed>30 ft.</speed>
+    <fly></fly>
+    <burrow></burrow>
+    <climb></climb>
+    <swim></swim>
+    <str>21</str>
+    <dex>9</dex>
+    <con>17</con>
+    <int>2</int>
+    <wis>10</wis>
+    <cha>7</cha>
+    <save>Con +6</save>
+    <skill></skill>
+    <resist></resist>
+    <vulnerable></vulnerable>
+    <immune></immune>
+    <conditionImmune></conditionImmune>
+    <senses></senses>
+    <passive>10</passive>
+    <languages></languages>
+    <cr>5</cr>
+    <action>
+      <action-name>Stomp</action-name>
+      <text>Weapon Attack: +8 to hit, reach 20 ft., one target. Hit: 27 (5d8 + 5) bludgeoning damage, and the target must succeed on a DC 14 Strength saving throw or be knocked prone.</text>
+      <attack>Stomp|8|5d8+5</attack>
+    </action>
+    <action>
+      <action-name>Tail</action-name>
+      <text>Melee Weapon Attack: +8 to hit, reach 20 ft., one target. Hit: 32 (6d8 + 5) bludgeoning damage.</text>
+      <attack>Claws|8|6d8+5</attack>
+    </action>
+    <spells></spells>
+  </monster>
+  <monster>
     <name>Camel</name>
     <size>Large</size>
     <type>beast</type>
@@ -419,7 +552,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>16</str><dex>8</dex><con>14</con><int>2</int><wis>8</wis><cha>5</cha>
+    <str>16</str>
+    <dex>8</dex>
+    <con>14</con>
+    <int>2</int>
+    <wis>8</wis>
+    <cha>5</cha>
     <save></save>
     <skill></skill>
     <resist></resist>
@@ -449,7 +587,12 @@
     <burrow></burrow>
     <climb>30 ft.</climb>
     <swim></swim>
-    <str>3</str><dex>15</dex><con>10</con><int>3</int><wis>12</wis><cha>7</cha>
+    <str>3</str>
+    <dex>15</dex>
+    <con>10</con>
+    <int>3</int>
+    <wis>12</wis>
+    <cha>7</cha>
     <save></save>
     <skill>Perception +3, Stealth +4</skill>
     <resist></resist>
@@ -483,7 +626,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim>30 ft.</swim>
-    <str>20</str><dex>10</dex><con>16</con><int>2</int><wis>13</wis><cha>7</cha>
+    <str>20</str>
+    <dex>10</dex>
+    <con>16</con>
+    <int>2</int>
+    <wis>13</wis>
+    <cha>7</cha>
     <save></save>
     <skill>Perception +3</skill>
     <resist></resist>
@@ -526,7 +674,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim>30 ft.</swim>
-    <str>15</str><dex>14</dex><con>12</con><int>1</int><wis>10</wis><cha>3</cha>
+    <str>15</str>
+    <dex>14</dex>
+    <con>12</con>
+    <int>1</int>
+    <wis>10</wis>
+    <cha>3</cha>
     <save></save>
     <skill></skill>
     <resist></resist>
@@ -550,6 +703,45 @@
     <spells></spells>
   </monster>
   <monster>
+    <name>Cow</name>
+    <size>Large</size>
+    <type>beast</type>
+    <alignment>unaligned</alignment>
+    <ac>10</ac>
+    <hp>15 (2d10 + 4)</hp>
+    <speed>30 ft.</speed>
+    <fly></fly>
+    <burrow></burrow>
+    <climb></climb>
+    <swim></swim>
+    <str>18</str>
+    <dex>10</dex>
+    <con>14</con>
+    <int>2</int>
+    <wis>10</wis>
+    <cha>4</cha>
+    <save></save>
+    <skill></skill>
+    <resist></resist>
+    <vulnerable></vulnerable>
+    <immune></immune>
+    <conditionImmune></conditionImmune>
+    <senses></senses>
+    <passive>10</passive>
+    <languages></languages>
+    <cr>1/4</cr>
+    <trait>
+      <trait-name>Charge</trait-name>
+      <text>If the cow moves at least 20 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an additional 7 (2d6) piercing damage.</text>
+    </trait>
+    <action>
+      <action-name>Gore</action-name>
+      <text>Melee Weapon Attack: +6 to hit, reach 5 ft., one creature. Hit: 7 (1d6 + 4) piercing damage.</text>
+      <attack>Gore|6|1d6+4</attack>
+    </action>
+    <spells></spells>
+  </monster>
+  <monster>
     <name>Crab</name>
     <size>Tiny</size>
     <type>beast</type>
@@ -561,7 +753,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim>20 ft.</swim>
-    <str>2</str><dex>11</dex><con>10</con><int>1</int><wis>8</wis><cha>2</cha>
+    <str>2</str>
+    <dex>11</dex>
+    <con>10</con>
+    <int>1</int>
+    <wis>8</wis>
+    <cha>2</cha>
     <save></save>
     <skill>Stealth +2</skill>
     <resist></resist>
@@ -595,7 +792,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim>20 ft.</swim>
-    <str>15</str><dex>10</dex><con>13</con><int>2</int><wis>10</wis><cha>5</cha>
+    <str>15</str>
+    <dex>10</dex>
+    <con>13</con>
+    <int>2</int>
+    <wis>10</wis>
+    <cha>5</cha>
     <save></save>
     <skill>Stealth +2</skill>
     <resist></resist>
@@ -629,7 +831,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>11</str><dex>16</dex><con>11</con><int>2</int><wis>14</wis><cha>5</cha>
+    <str>11</str>
+    <dex>16</dex>
+    <con>11</con>
+    <int>2</int>
+    <wis>14</wis>
+    <cha>5</cha>
     <save></save>
     <skill></skill>
     <resist></resist>
@@ -659,7 +866,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>17</str><dex>15</dex><con>15</con><int>3</int><wis>12</wis><cha>7</cha>
+    <str>17</str>
+    <dex>15</dex>
+    <con>15</con>
+    <int>3</int>
+    <wis>12</wis>
+    <cha>7</cha>
     <save></save>
     <skill>Perception +3, Stealth +4</skill>
     <resist></resist>
@@ -686,6 +898,49 @@
     <spells></spells>
   </monster>
   <monster>
+    <name>Dolphin</name>
+    <size>Medium</size>
+    <type>beast</type>
+    <alignment>unaligned</alignment>
+    <ac>12 (natural armor)</ac>
+    <hp>11 (2d8 + 2)</hp>
+    <speed>0 ft.</speed>
+    <fly></fly>
+    <burrow></burrow>
+    <climb></climb>
+    <swim>60 ft.</swim>
+    <str>14</str>
+    <dex>13</dex>
+    <con>13</con>
+    <int>6</int>
+    <wis>12</wis>
+    <cha>7</cha>
+    <save></save>
+    <skill>Perception +3</skill>
+    <resist></resist>
+    <vulnerable></vulnerable>
+    <immune></immune>
+    <conditionImmune></conditionImmune>
+    <senses>blindsight 60 ft.</senses>
+    <passive>13</passive>
+    <languages></languages>
+    <cr>1/8</cr>
+    <trait>
+      <trait-name>Charge</trait-name>
+      <text>If the dolphin moves at least 30 feet straight toward a target and then hits it with a slam attack on the same turn, the target takes an additional 3 (1d6) bludgeoning damage.</text>
+    </trait>
+    <trait>
+      <trait-name>Hold Breath</trait-name>
+      <text>The dolphin can hold its breath for 20 minutes.</text>
+    </trait>
+    <action>
+      <action-name>Slam</action-name>
+      <text>Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) bludgeoning damage.</text>
+      <attack>Slam|4|1d6+2</attack>
+    </action>
+    <spells></spells>
+  </monster>
+  <monster>
     <name>Draft Horse</name>
     <size>Large</size>
     <type>beast</type>
@@ -697,7 +952,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>18</str><dex>10</dex><con>12</con><int>2</int><wis>11</wis><cha>7</cha>
+    <str>18</str>
+    <dex>10</dex>
+    <con>12</con>
+    <int>2</int>
+    <wis>11</wis>
+    <cha>7</cha>
     <save></save>
     <skill></skill>
     <resist></resist>
@@ -727,7 +987,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>6</str><dex>15</dex><con>10</con><int>2</int><wis>14</wis><cha>7</cha>
+    <str>6</str>
+    <dex>15</dex>
+    <con>10</con>
+    <int>2</int>
+    <wis>14</wis>
+    <cha>7</cha>
     <save></save>
     <skill>Perception +4</skill>
     <resist></resist>
@@ -761,7 +1026,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>22</str><dex>9</dex><con>17</con><int>3</int><wis>11</wis><cha>6</cha>
+    <str>22</str>
+    <dex>9</dex>
+    <con>17</con>
+    <int>3</int>
+    <wis>11</wis>
+    <cha>6</cha>
     <save></save>
     <skill></skill>
     <resist></resist>
@@ -800,7 +1070,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>16</str><dex>10</dex><con>12</con><int>2</int><wis>10</wis><cha>6</cha>
+    <str>16</str>
+    <dex>10</dex>
+    <con>12</con>
+    <int>2</int>
+    <wis>10</wis>
+    <cha>6</cha>
     <save></save>
     <skill></skill>
     <resist></resist>
@@ -838,7 +1113,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim>30 ft.</swim>
-    <str>4</str><dex>18</dex><con>11</con><int>2</int><wis>12</wis><cha>5</cha>
+    <str>4</str>
+    <dex>18</dex>
+    <con>11</con>
+    <int>2</int>
+    <wis>12</wis>
+    <cha>5</cha>
     <save></save>
     <skill></skill>
     <resist></resist>
@@ -872,7 +1152,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim>20 ft.</swim>
-    <str>1</str><dex>13</dex><con>8</con><int>1</int><wis>8</wis><cha>3</cha>
+    <str>1</str>
+    <dex>13</dex>
+    <con>8</con>
+    <int>1</int>
+    <wis>8</wis>
+    <cha>3</cha>
     <save></save>
     <skill>Perception +1, Stealth +3</skill>
     <resist></resist>
@@ -905,7 +1190,12 @@
     <burrow>10 ft.</burrow>
     <climb></climb>
     <swim></swim>
-    <str>13</str><dex>10</dex><con>15</con><int>2</int><wis>12</wis><cha>5</cha>
+    <str>13</str>
+    <dex>10</dex>
+    <con>15</con>
+    <int>2</int>
+    <wis>12</wis>
+    <cha>5</cha>
     <save></save>
     <skill></skill>
     <resist></resist>
@@ -948,7 +1238,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>15</str><dex>16</dex><con>11</con><int>2</int><wis>12</wis><cha>6</cha>
+    <str>15</str>
+    <dex>16</dex>
+    <con>11</con>
+    <int>2</int>
+    <wis>12</wis>
+    <cha>6</cha>
     <save></save>
     <skill></skill>
     <resist></resist>
@@ -986,7 +1281,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>17</str><dex>10</dex><con>16</con><int>2</int><wis>7</wis><cha>5</cha>
+    <str>17</str>
+    <dex>10</dex>
+    <con>16</con>
+    <int>2</int>
+    <wis>7</wis>
+    <cha>5</cha>
     <save></save>
     <skill></skill>
     <resist></resist>
@@ -1025,7 +1325,12 @@
     <burrow></burrow>
     <climb>30 ft.</climb>
     <swim></swim>
-    <str>5</str><dex>14</dex><con>12</con><int>1</int><wis>7</wis><cha>3</cha>
+    <str>5</str>
+    <dex>14</dex>
+    <con>12</con>
+    <int>1</int>
+    <wis>7</wis>
+    <cha>3</cha>
     <save></save>
     <skill></skill>
     <resist></resist>
@@ -1055,7 +1360,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim>30 ft.</swim>
-    <str>19</str><dex>14</dex><con>12</con><int>1</int><wis>10</wis><cha>3</cha>
+    <str>19</str>
+    <dex>14</dex>
+    <con>12</con>
+    <int>1</int>
+    <wis>10</wis>
+    <cha>3</cha>
     <save></save>
     <skill>Perception +2</skill>
     <resist></resist>
@@ -1090,7 +1400,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim>30 ft.</swim>
-    <str>13</str><dex>15</dex><con>11</con><int>1</int><wis>9</wis><cha>3</cha>
+    <str>13</str>
+    <dex>15</dex>
+    <con>11</con>
+    <int>1</int>
+    <wis>9</wis>
+    <cha>3</cha>
     <save></save>
     <skill>Stealth +4</skill>
     <resist></resist>
@@ -1124,7 +1439,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim>50 ft.</swim>
-    <str>21</str><dex>9</dex><con>17</con><int>2</int><wis>10</wis><cha>7</cha>
+    <str>21</str>
+    <dex>9</dex>
+    <con>17</con>
+    <int>2</int>
+    <wis>10</wis>
+    <cha>7</cha>
     <save></save>
     <skill>Stealth +5</skill>
     <resist></resist>
@@ -1167,7 +1487,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>16</str><dex>17</dex><con>13</con><int>8</int><wis>14</wis><cha>10</cha>
+    <str>16</str>
+    <dex>17</dex>
+    <con>13</con>
+    <int>8</int>
+    <wis>14</wis>
+    <cha>10</cha>
     <save></save>
     <skill>Perception +4</skill>
     <resist></resist>
@@ -1210,7 +1535,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>19</str><dex>16</dex><con>14</con><int>7</int><wis>14</wis><cha>10</cha>
+    <str>19</str>
+    <dex>16</dex>
+    <con>14</con>
+    <int>7</int>
+    <wis>14</wis>
+    <cha>10</cha>
     <save></save>
     <skill>Perception +4</skill>
     <resist></resist>
@@ -1250,7 +1580,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>8</str><dex>10</dex><con>12</con><int>1</int><wis>7</wis><cha>3</cha>
+    <str>8</str>
+    <dex>10</dex>
+    <con>12</con>
+    <int>1</int>
+    <wis>7</wis>
+    <cha>3</cha>
     <save></save>
     <skill></skill>
     <resist></resist>
@@ -1284,7 +1619,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>14</str><dex>13</dex><con>13</con><int>2</int><wis>10</wis><cha>3</cha>
+    <str>14</str>
+    <dex>13</dex>
+    <con>13</con>
+    <int>2</int>
+    <wis>10</wis>
+    <cha>3</cha>
     <save></save>
     <skill></skill>
     <resist></resist>
@@ -1309,7 +1649,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim>30 ft.</swim>
-    <str>12</str><dex>13</dex><con>11</con><int>2</int><wis>10</wis><cha>3</cha>
+    <str>12</str>
+    <dex>13</dex>
+    <con>11</con>
+    <int>2</int>
+    <wis>10</wis>
+    <cha>3</cha>
     <save></save>
     <skill>Perception +2, Stealth +3</skill>
     <resist></resist>
@@ -1351,7 +1696,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>17</str><dex>11</dex><con>12</con><int>3</int><wis>12</wis><cha>6</cha>
+    <str>17</str>
+    <dex>11</dex>
+    <con>12</con>
+    <int>3</int>
+    <wis>12</wis>
+    <cha>6</cha>
     <save></save>
     <skill></skill>
     <resist></resist>
@@ -1390,7 +1740,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>16</str><dex>14</dex><con>14</con><int>2</int><wis>12</wis><cha>7</cha>
+    <str>16</str>
+    <dex>14</dex>
+    <con>14</con>
+    <int>2</int>
+    <wis>12</wis>
+    <cha>7</cha>
     <save></save>
     <skill>Perception +3</skill>
     <resist></resist>
@@ -1424,7 +1779,12 @@
     <burrow></burrow>
     <climb>30 ft.</climb>
     <swim></swim>
-    <str>15</str><dex>12</dex><con>13</con><int>2</int><wis>10</wis><cha>5</cha>
+    <str>15</str>
+    <dex>12</dex>
+    <con>13</con>
+    <int>2</int>
+    <wis>10</wis>
+    <cha>5</cha>
     <save></save>
     <skill></skill>
     <resist></resist>
@@ -1462,7 +1822,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim>60 ft.</swim>
-    <str>17</str><dex>13</dex><con>13</con><int>4</int><wis>10</wis><cha>4</cha>
+    <str>17</str>
+    <dex>13</dex>
+    <con>13</con>
+    <int>4</int>
+    <wis>10</wis>
+    <cha>4</cha>
     <save></save>
     <skill>Perception +4, Stealth +5</skill>
     <resist></resist>
@@ -1508,7 +1873,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>13</str><dex>15</dex><con>12</con><int>8</int><wis>13</wis><cha>10</cha>
+    <str>13</str>
+    <dex>15</dex>
+    <con>12</con>
+    <int>8</int>
+    <wis>13</wis>
+    <cha>10</cha>
     <save></save>
     <skill>Perception +5, Stealth +4</skill>
     <resist></resist>
@@ -1546,7 +1916,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim>30 ft.</swim>
-    <str>10</str><dex>18</dex><con>13</con><int>2</int><wis>10</wis><cha>3</cha>
+    <str>10</str>
+    <dex>18</dex>
+    <con>13</con>
+    <int>2</int>
+    <wis>10</wis>
+    <cha>3</cha>
     <save></save>
     <skill>Perception +2</skill>
     <resist></resist>
@@ -1576,7 +1951,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>7</str><dex>15</dex><con>11</con><int>2</int><wis>10</wis><cha>4</cha>
+    <str>7</str>
+    <dex>15</dex>
+    <con>11</con>
+    <int>2</int>
+    <wis>10</wis>
+    <cha>4</cha>
     <save></save>
     <skill></skill>
     <resist></resist>
@@ -1614,7 +1994,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>7</str><dex>15</dex><con>11</con><int>2</int><wis>10</wis><cha>4</cha>
+    <str>7</str>
+    <dex>15</dex>
+    <con>11</con>
+    <int>2</int>
+    <wis>10</wis>
+    <cha>4</cha>
     <save></save>
     <skill></skill>
     <resist></resist>
@@ -1644,7 +2029,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>15</str><dex>13</dex><con>15</con><int>1</int><wis>9</wis><cha>3</cha>
+    <str>15</str>
+    <dex>13</dex>
+    <con>15</con>
+    <int>1</int>
+    <wis>9</wis>
+    <cha>3</cha>
     <save></save>
     <skill></skill>
     <resist></resist>
@@ -1683,7 +2073,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim>40 ft.</swim>
-    <str>12</str><dex>15</dex><con>11</con><int>2</int><wis>12</wis><cha>5</cha>
+    <str>12</str>
+    <dex>15</dex>
+    <con>11</con>
+    <int>2</int>
+    <wis>12</wis>
+    <cha>5</cha>
     <save></save>
     <skill></skill>
     <resist></resist>
@@ -1722,7 +2117,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim>50 ft.</swim>
-    <str>23</str><dex>11</dex><con>21</con><int>1</int><wis>10</wis><cha>5</cha>
+    <str>23</str>
+    <dex>11</dex>
+    <con>21</con>
+    <int>1</int>
+    <wis>10</wis>
+    <cha>5</cha>
     <save></save>
     <skill>Perception +3</skill>
     <resist></resist>
@@ -1760,7 +2160,12 @@
     <burrow></burrow>
     <climb>30 ft.</climb>
     <swim></swim>
-    <str>14</str><dex>16</dex><con>12</con><int>2</int><wis>11</wis><cha>4</cha>
+    <str>14</str>
+    <dex>16</dex>
+    <con>12</con>
+    <int>2</int>
+    <wis>11</wis>
+    <cha>4</cha>
     <save></save>
     <skill>Stealth +7</skill>
     <resist></resist>
@@ -1807,7 +2212,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim>40 ft.</swim>
-    <str>15</str><dex>13</dex><con>13</con><int>2</int><wis>10</wis><cha>3</cha>
+    <str>15</str>
+    <dex>13</dex>
+    <con>13</con>
+    <int>2</int>
+    <wis>10</wis>
+    <cha>3</cha>
     <save></save>
     <skill></skill>
     <resist></resist>
@@ -1850,7 +2260,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>15</str><dex>10</dex><con>15</con><int>6</int><wis>12</wis><cha>7</cha>
+    <str>15</str>
+    <dex>10</dex>
+    <con>15</con>
+    <int>6</int>
+    <wis>12</wis>
+    <cha>7</cha>
     <save></save>
     <skill>Perception +3</skill>
     <resist></resist>
@@ -1896,8 +2311,13 @@
     <fly>50 ft.</fly>
     <burrow></burrow>
     <climb></climb>
-    <swim>50 ft.</swim>
-    <str>10</str><dex>14</dex><con>10</con><int>1</int><wis>10</wis><cha>3</cha>
+    <swim></swim>
+    <str>10</str>
+    <dex>14</dex>
+    <con>10</con>
+    <int>1</int>
+    <wis>10</wis>
+    <cha>3</cha>
     <save></save>
     <skill></skill>
     <resist></resist>
@@ -1927,7 +2347,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>11</str><dex>16</dex><con>10</con><int>4</int><wis>12</wis><cha>5</cha>
+    <str>11</str>
+    <dex>16</dex>
+    <con>10</con>
+    <int>4</int>
+    <wis>12</wis>
+    <cha>5</cha>
     <save></save>
     <skill>Perception +3, Stealth +5</skill>
     <resist></resist>
@@ -1961,7 +2386,12 @@
     <burrow></burrow>
     <climb>40 ft.</climb>
     <swim></swim>
-    <str>12</str><dex>16</dex><con>13</con><int>3</int><wis>12</wis><cha>4</cha>
+    <str>12</str>
+    <dex>16</dex>
+    <con>13</con>
+    <int>3</int>
+    <wis>12</wis>
+    <cha>4</cha>
     <save></save>
     <skill>Perception +3, Stealth +7</skill>
     <resist></resist>
@@ -2003,7 +2433,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>12</str><dex>10</dex><con>11</con><int>2</int><wis>10</wis><cha>5</cha>
+    <str>12</str>
+    <dex>10</dex>
+    <con>11</con>
+    <int>2</int>
+    <wis>10</wis>
+    <cha>5</cha>
     <save></save>
     <skill></skill>
     <resist></resist>
@@ -2042,7 +2477,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>5</str><dex>16</dex><con>8</con><int>2</int><wis>14</wis><cha>6</cha>
+    <str>5</str>
+    <dex>16</dex>
+    <con>8</con>
+    <int>2</int>
+    <wis>14</wis>
+    <cha>6</cha>
     <save></save>
     <skill>Perception +4</skill>
     <resist></resist>
@@ -2076,7 +2516,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim>40 ft.</swim>
-    <str>18</str><dex>13</dex><con>15</con><int>1</int><wis>10</wis><cha>4</cha>
+    <str>18</str>
+    <dex>13</dex>
+    <con>15</con>
+    <int>1</int>
+    <wis>10</wis>
+    <cha>4</cha>
     <save></save>
     <skill>Perception +2</skill>
     <resist></resist>
@@ -2114,7 +2559,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>11</str><dex>13</dex><con>12</con><int>2</int><wis>12</wis><cha>5</cha>
+    <str>11</str>
+    <dex>13</dex>
+    <con>12</con>
+    <int>2</int>
+    <wis>12</wis>
+    <cha>5</cha>
     <save></save>
     <skill>Perception +3</skill>
     <resist></resist>
@@ -2148,7 +2598,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>8</str><dex>15</dex><con>11</con><int>3</int><wis>12</wis><cha>6</cha>
+    <str>8</str>
+    <dex>15</dex>
+    <con>11</con>
+    <int>3</int>
+    <wis>12</wis>
+    <cha>6</cha>
     <save></save>
     <skill>Perception +3</skill>
     <resist></resist>
@@ -2186,7 +2641,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim>60 ft.</swim>
-    <str>19</str><dex>10</dex><con>13</con><int>3</int><wis>12</wis><cha>7</cha>
+    <str>19</str>
+    <dex>10</dex>
+    <con>13</con>
+    <int>3</int>
+    <wis>12</wis>
+    <cha>7</cha>
     <save></save>
     <skill>Perception +3</skill>
     <resist></resist>
@@ -2227,7 +2687,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>17</str><dex>15</dex><con>13</con><int>3</int><wis>12</wis><cha>8</cha>
+    <str>17</str>
+    <dex>15</dex>
+    <con>13</con>
+    <int>3</int>
+    <wis>12</wis>
+    <cha>8</cha>
     <save></save>
     <skill>Perception +3, Stealth +6</skill>
     <resist></resist>
@@ -2278,7 +2743,12 @@
     <burrow></burrow>
     <climb>20 ft.</climb>
     <swim></swim>
-    <str>2</str><dex>11</dex><con>10</con><int>1</int><wis>8</wis><cha>3</cha>
+    <str>2</str>
+    <dex>11</dex>
+    <con>10</con>
+    <int>1</int>
+    <wis>8</wis>
+    <cha>3</cha>
     <save></save>
     <skill></skill>
     <resist></resist>
@@ -2308,7 +2778,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>24</str><dex>9</dex><con>21</con><int>3</int><wis>11</wis><cha>6</cha>
+    <str>24</str>
+    <dex>9</dex>
+    <con>21</con>
+    <int>3</int>
+    <wis>11</wis>
+    <cha>6</cha>
     <save></save>
     <skill></skill>
     <resist></resist>
@@ -2347,7 +2822,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>13</str><dex>14</dex><con>12</con><int>3</int><wis>12</wis><cha>7</cha>
+    <str>13</str>
+    <dex>14</dex>
+    <con>12</con>
+    <int>3</int>
+    <wis>12</wis>
+    <cha>7</cha>
     <save></save>
     <skill>Perception +3</skill>
     <resist></resist>
@@ -2381,7 +2861,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>14</str><dex>10</dex><con>13</con><int>2</int><wis>10</wis><cha>5</cha>
+    <str>14</str>
+    <dex>10</dex>
+    <con>13</con>
+    <int>2</int>
+    <wis>10</wis>
+    <cha>5</cha>
     <save></save>
     <skill></skill>
     <resist></resist>
@@ -2419,7 +2904,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim>30 ft.</swim>
-    <str>4</str><dex>15</dex><con>11</con><int>3</int><wis>10</wis><cha>4</cha>
+    <str>4</str>
+    <dex>15</dex>
+    <con>11</con>
+    <int>3</int>
+    <wis>10</wis>
+    <cha>4</cha>
     <save></save>
     <skill>Perception +2, Stealth +4</skill>
     <resist></resist>
@@ -2465,7 +2955,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>3</str><dex>13</dex><con>8</con><int>2</int><wis>12</wis><cha>7</cha>
+    <str>3</str>
+    <dex>13</dex>
+    <con>8</con>
+    <int>2</int>
+    <wis>12</wis>
+    <cha>7</cha>
     <save></save>
     <skill>Perception +3, Stealth +3</skill>
     <resist></resist>
@@ -2503,7 +2998,12 @@
     <burrow></burrow>
     <climb>40 ft.</climb>
     <swim></swim>
-    <str>14</str><dex>15</dex><con>10</con><int>3</int><wis>14</wis><cha>7</cha>
+    <str>14</str>
+    <dex>15</dex>
+    <con>10</con>
+    <int>3</int>
+    <wis>14</wis>
+    <cha>7</cha>
     <save></save>
     <skill>Perception +4, Stealth +6</skill>
     <resist></resist>
@@ -2546,7 +3046,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim>40 ft.</swim>
-    <str>18</str><dex>15</dex><con>16</con><int>2</int><wis>12</wis><cha>5</cha>
+    <str>18</str>
+    <dex>15</dex>
+    <con>16</con>
+    <int>2</int>
+    <wis>12</wis>
+    <cha>5</cha>
     <save></save>
     <skill>Perception +3, Stealth +4</skill>
     <resist></resist>
@@ -2580,7 +3085,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim>30 ft.</swim>
-    <str>2</str><dex>16</dex><con>11</con><int>1</int><wis>10</wis><cha>3</cha>
+    <str>2</str>
+    <dex>16</dex>
+    <con>11</con>
+    <int>1</int>
+    <wis>10</wis>
+    <cha>3</cha>
     <save></save>
     <skill></skill>
     <resist></resist>
@@ -2610,7 +3120,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim>30 ft.</swim>
-    <str>20</str><dex>10</dex><con>16</con><int>2</int><wis>13</wis><cha>7</cha>
+    <str>20</str>
+    <dex>10</dex>
+    <con>16</con>
+    <int>2</int>
+    <wis>13</wis>
+    <cha>7</cha>
     <save></save>
     <skill>Perception +3</skill>
     <resist></resist>
@@ -2653,7 +3168,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>15</str><dex>10</dex><con>13</con><int>2</int><wis>11</wis><cha>7</cha>
+    <str>15</str>
+    <dex>10</dex>
+    <con>13</con>
+    <int>2</int>
+    <wis>11</wis>
+    <cha>7</cha>
     <save></save>
     <skill></skill>
     <resist></resist>
@@ -2683,7 +3203,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>12</str><dex>15</dex><con>10</con><int>2</int><wis>9</wis><cha>5</cha>
+    <str>12</str>
+    <dex>15</dex>
+    <con>10</con>
+    <int>2</int>
+    <wis>9</wis>
+    <cha>5</cha>
     <save></save>
     <skill>Perception +1</skill>
     <resist></resist>
@@ -2716,7 +3241,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim>40 ft.</swim>
-    <str>2</str><dex>16</dex><con>9</con><int>1</int><wis>7</wis><cha>2</cha>
+    <str>2</str>
+    <dex>16</dex>
+    <con>9</con>
+    <int>1</int>
+    <wis>7</wis>
+    <cha>2</cha>
     <save></save>
     <skill></skill>
     <resist></resist>
@@ -2754,7 +3284,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>2</str><dex>11</dex><con>9</con><int>2</int><wis>10</wis><cha>4</cha>
+    <str>2</str>
+    <dex>11</dex>
+    <con>9</con>
+    <int>2</int>
+    <wis>10</wis>
+    <cha>4</cha>
     <save></save>
     <skill></skill>
     <resist></resist>
@@ -2788,7 +3323,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>2</str><dex>14</dex><con>8</con><int>2</int><wis>12</wis><cha>6</cha>
+    <str>2</str>
+    <dex>14</dex>
+    <con>8</con>
+    <int>2</int>
+    <wis>12</wis>
+    <cha>6</cha>
     <save></save>
     <skill>Perception +3</skill>
     <resist></resist>
@@ -2821,7 +3361,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim>40 ft.</swim>
-    <str>14</str><dex>13</dex><con>13</con><int>1</int><wis>10</wis><cha>4</cha>
+    <str>14</str>
+    <dex>13</dex>
+    <con>13</con>
+    <int>1</int>
+    <wis>10</wis>
+    <cha>4</cha>
     <save></save>
     <skill>Perception +2</skill>
     <resist></resist>
@@ -2859,7 +3404,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>21</str><dex>8</dex><con>15</con><int>2</int><wis>12</wis><cha>6</cha>
+    <str>21</str>
+    <dex>8</dex>
+    <con>15</con>
+    <int>2</int>
+    <wis>12</wis>
+    <cha>6</cha>
     <save></save>
     <skill></skill>
     <resist></resist>
@@ -2894,7 +3444,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>16</str><dex>10</dex><con>12</con><int>2</int><wis>11</wis><cha>7</cha>
+    <str>16</str>
+    <dex>10</dex>
+    <con>12</con>
+    <int>2</int>
+    <wis>11</wis>
+    <cha>7</cha>
     <save></save>
     <skill></skill>
     <resist></resist>
@@ -2924,7 +3479,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>18</str><dex>14</dex><con>15</con><int>3</int><wis>12</wis><cha>8</cha>
+    <str>18</str>
+    <dex>14</dex>
+    <con>15</con>
+    <int>3</int>
+    <wis>12</wis>
+    <cha>8</cha>
     <save></save>
     <skill>Perception +3, Stealth +6</skill>
     <resist></resist>
@@ -2967,7 +3527,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>2</str><dex>11</dex><con>8</con><int>1</int><wis>8</wis><cha>2</cha>
+    <str>2</str>
+    <dex>11</dex>
+    <con>8</con>
+    <int>1</int>
+    <wis>8</wis>
+    <cha>2</cha>
     <save></save>
     <skill></skill>
     <resist></resist>
@@ -2997,7 +3562,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim>20 ft.</swim>
-    <str>1</str><dex>12</dex><con>8</con><int>1</int><wis>10</wis><cha>2</cha>
+    <str>1</str>
+    <dex>12</dex>
+    <con>8</con>
+    <int>1</int>
+    <wis>10</wis>
+    <cha>2</cha>
     <save></save>
     <skill></skill>
     <resist></resist>
@@ -3026,7 +3596,12 @@
     <burrow></burrow>
     <climb>20 ft.</climb>
     <swim></swim>
-    <str>2</str><dex>14</dex><con>8</con><int>1</int><wis>10</wis><cha>2</cha>
+    <str>2</str>
+    <dex>14</dex>
+    <con>8</con>
+    <int>1</int>
+    <wis>10</wis>
+    <cha>2</cha>
     <save></save>
     <skill>Stealth +4</skill>
     <resist></resist>
@@ -3056,6 +3631,41 @@
     </action>
     <spells></spells>
   </monster>
+    <monster>
+    <name>Stegosaurus</name>
+    <size>Huge</size>
+    <type>beast</type>
+    <alignment>unaligned</alignment>
+    <ac>13 (natural armor)</ac>
+    <hp>76 (8d12 + 24)</hp>
+    <speed>40 ft.</speed>
+    <fly></fly>
+    <burrow></burrow>
+    <climb></climb>
+    <swim></swim>
+    <str>20</str>
+    <dex>9</dex>
+    <con>17</con>
+    <int>2</int>
+    <wis>11</wis>
+    <cha>5</cha>
+    <save></save>
+    <skill></skill>
+    <resist></resist>
+    <vulnerable></vulnerable>
+    <immune></immune>
+    <conditionImmune></conditionImmune>
+    <senses></senses>
+    <passive>10</passive>
+    <languages></languages>
+    <cr>4</cr>
+    <action>
+      <action-name>Tail</action-name>
+      <text>Melee Weapon Attack: +7 to hit, reach 10 ft., one creature. Hit: 26 (6d6 + 5) piercing damage.</text>
+      <attack>Tail|7|6d6+5</attack>
+    </action>
+    <spells></spells>
+  </monster>
   <monster>
     <name>Stirge</name>
     <size>Tiny</size>
@@ -3068,7 +3678,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>4</str><dex>16</dex><con>11</con><int>2</int><wis>8</wis><cha>6</cha>
+    <str>4</str>
+    <dex>16</dex>
+    <con>11</con>
+    <int>2</int>
+    <wis>8</wis>
+    <cha>6</cha>
     <save></save>
     <skill></skill>
     <resist></resist>
@@ -3099,7 +3714,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>17</str><dex>15</dex><con>14</con><int>3</int><wis>12</wis><cha>8</cha>
+    <str>17</str>
+    <dex>15</dex>
+    <con>14</con>
+    <int>3</int>
+    <wis>12</wis>
+    <cha>8</cha>
     <save></save>
     <skill>Perception +3, Stealth +6</skill>
     <resist></resist>
@@ -3141,7 +3761,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>22</str><dex>9</dex><con>17</con><int>2</int><wis>11</wis><cha>5</cha>
+    <str>22</str>
+    <dex>9</dex>
+    <con>17</con>
+    <int>2</int>
+    <wis>11</wis>
+    <cha>5</cha>
     <save></save>
     <skill></skill>
     <resist></resist>
@@ -3180,7 +3805,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>7</str><dex>10</dex><con>13</con><int>2</int><wis>12</wis><cha>4</cha>
+    <str>7</str>
+    <dex>10</dex>
+    <con>13</con>
+    <int>2</int>
+    <wis>12</wis>
+    <cha>4</cha>
     <save></save>
     <skill>Perception +3</skill>
     <resist></resist>
@@ -3218,7 +3848,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>18</str><dex>12</dex><con>13</con><int>2</int><wis>12</wis><cha>7</cha>
+    <str>18</str>
+    <dex>12</dex>
+    <con>13</con>
+    <int>2</int>
+    <wis>12</wis>
+    <cha>7</cha>
     <save></save>
     <skill></skill>
     <resist></resist>
@@ -3252,7 +3887,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>3</str><dex>16</dex><con>8</con><int>2</int><wis>12</wis><cha>3</cha>
+    <str>3</str>
+    <dex>16</dex>
+    <con>8</con>
+    <int>2</int>
+    <wis>12</wis>
+    <cha>3</cha>
     <save></save>
     <skill>Perception +3, Stealth +5</skill>
     <resist></resist>
@@ -3286,7 +3926,12 @@
     <burrow></burrow>
     <climb></climb>
     <swim></swim>
-    <str>12</str><dex>15</dex><con>12</con><int>3</int><wis>12</wis><cha>6</cha>
+    <str>12</str>
+    <dex>15</dex>
+    <con>12</con>
+    <int>3</int>
+    <wis>12</wis>
+    <cha>6</cha>
     <save></save>
     <skill>Perception +3, Stealth +4</skill>
     <resist></resist>
