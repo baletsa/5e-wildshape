@@ -5,13 +5,16 @@ globals:
   $: false
   validator: true
   ga: false
+  SecureTag: false
+  Matter: false
   immediateDownload: true
+  __webpack_public_path__: true
+
+parser: babel-eslint
 
 parserOptions:
   sourceType: "module"
-
-ecmaFeatures:
-  modules: true
+  ecmaVersion: 2017
 
 env:
   es6: true
@@ -24,7 +27,7 @@ rules:
   quotes: [2, "single"]
   semi: [2, "always"]
   no-multiple-empty-lines: [2, {"max": 1}]
-  no-console: [1]
+  no-console: [0]
 
   brace-style: [2, "stroustrup"]
   comma-dangle: [2, "always-multiline"]
@@ -32,7 +35,7 @@ rules:
   computed-property-spacing: [2, "never"]
   dot-location: [2, "property"]
 
-  #one-var: [1, "always"]
+  one-var: [0, "always"]
   #no-var: [2]
   prefer-const: [2]
   no-bitwise: [2]

@@ -1,0 +1,10 @@
+//bower components
+//@import "normalize.scss/normalize";
+//base theme partials
+@import "partials/core/vars";
+@import "partials/core/mixins";
+@import "partials/core/helpers";
+@import "partials/core/base";
+//page specific partials
+@import "partials/pages/homepage";
+@import "partials/components/modal";
