@@ -4,7 +4,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
   var filter = [];
 
-  // Create a Monster Stat Block
+  var moon = false;
+
+  // Create monster entries by group 
   function monsterList(cr) {
 
     const monsterWrapper = $('#monList'),
@@ -34,8 +36,16 @@ window.addEventListener('DOMContentLoaded', () => {
             else if (currentLvl >= 4 && currentLvl < 8) {
               return beast.cr === cr && beast.fly === null;
             }
-            else {
+            else if (currentLvl >= 8 && currentLvl < 10) {
               return beast.cr === cr;
+            }
+            else {
+              if (moon && currentLvl < 15 && cr == '5') {
+                return beast.type !== 'beast';
+              } 
+              else {
+                return beast.cr === cr;
+              }
             }
           });
 
@@ -89,12 +99,20 @@ window.addEventListener('DOMContentLoaded', () => {
             if (beast.burrow !== null) {
               icons += '<span class="icons__icon"><svg class="icons__icon-image"><use xlink:href="#icon-burrow" /></svg><span class="icons__icon-text">burrow</span></span>';
             }
+            if (beast.subtype === 'elemental') {
+              icons += '<span class="icons__icon"><svg class="icons__icon-image"><use xlink:href="#icon-elemental" /></svg><span class="icons__icon-text">elemental</span></span>';
+            }
 
             monList += '<li class="beast"><h3 class="beast__name">' + beast.name + '</h3><div class="icons">' + icons + '</div></li>';
             i++;
           });
-          $('.cr-group[data-cr="' + cr + '"]').find('.cr-creature-list').html(monList);
-          $('.cr-group[data-cr="' + cr + '"]').find('.cr-rating').html(i);
+
+          // console.log(cr);
+          // console.log(monList);
+
+          // find matching group to add beast
+          document.querySelector('[data-cr="' + cr + '"] .cr-creature-list').insertAdjacentHTML('beforeend', monList);
+          document.querySelector('[data-cr="' + cr + '"] .entry-total').innerHTML = i;
 
         },
         error: function() {
@@ -104,16 +122,21 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // add monster modal
   function addMonsters(list) {
     list.forEach(val => {
       var html = '<div class="cr-group" data-cr="' + val + '">' +
         '<div class="cr-header">' +
         '<h2 class="cr-title">CR ' + val + '</h2>' +
-        '<span class="cr-rating"></span>' +
+        '<span class="entry-total"></span>' +
         '</div>' +
         '<ul class="cr-creature-list"></ul>' +
         '</div>';
+
+      // create groupings  
       $('#monList').prepend(html);
+
+      // fill in list with creatures
       monsterList(val);
     });
   }
@@ -122,7 +145,6 @@ window.addEventListener('DOMContentLoaded', () => {
   function monsterLvl() {
     var preList,
       crList,
-      moon,
       level;
 
     if (localStorage.getItem('cLevel') !== null) {
@@ -163,6 +185,11 @@ window.addEventListener('DOMContentLoaded', () => {
           var foo = Math.floor(i / 3);
           preList.push('' + foo + '');
         }
+
+        if (level >= 10) {
+          preList.push('' + 5 + '');
+        }
+
         $.each(preList, function(i, el) {
           if ($.inArray(el, crList) === -1) {
             crList.push(el);
@@ -181,6 +208,8 @@ window.addEventListener('DOMContentLoaded', () => {
         crList = ['0', '1/8', '1/4', '1/2', '1'];
       }
     }
+
+    // add monsters
     addMonsters(crList);
   }
 
@@ -265,8 +294,13 @@ window.addEventListener('DOMContentLoaded', () => {
             statBlock += '<div class="stat-group"><span>' + action['action-name'] + ': </span>';
 
             if (Array.isArray(action.text)) {
-              action.text.forEach(line => {
-                statBlock += line.replace('Melee Weapon Attack:', '<i>Melee Weapon Attack:</i>').replace('Hit:', '<i>Hit:</i>') + '<br>';
+              action.text.forEach((line, index) => {
+                if (index === 0) {
+                  statBlock += line.replace('Melee Weapon Attack:', '<i>Melee Weapon Attack:</i>').replace('Hit:', '<i>Hit:</i>');
+                }
+                else {
+                  statBlock += '<p>' + line.replace('Melee Weapon Attack:', '<i>Melee Weapon Attack:</i>').replace('Hit:', '<i>Hit:</i>') + '</p>';
+                }
               });
             } 
             else {
@@ -278,9 +312,16 @@ window.addEventListener('DOMContentLoaded', () => {
         }
 
         if (creature.reaction && creature.reaction.length > 0) {
-          creature.reaction.forEach(reaction => {
+          creature.reaction.forEach((reaction, index) => {
             statBlock += '<div class="stat-group"><span>' + reaction['reaction-name'] + ': </span>';
-            statBlock += reaction.text + '<br>';
+     
+            if (index === 0) {
+              statBlock += reaction.text;
+            }
+            else {
+              statBlock += '<p>' + reaction.text + '</p>';
+            }
+
             statBlock += '</div>';
           });
         }
